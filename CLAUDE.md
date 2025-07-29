@@ -16,33 +16,32 @@
 - **개발** : Next.js, TypeScript, React.js
 - **스타일링** : tailwindcss@4
 - **API 요청** : axios, @tanstack/react-query
-- **애니메이션** : motion
+- **애니메이션** : lottie-node
 
 # 디렉토리 구조
 
 ```
 figma-mcp/
 ├── public/ /* 정적 에셋 예: png, jpg, ... */
-└── src/
-    └── app/
-        └── [페이지 이름]/
-            ├── _features/
-            │   └── ui/
-            │       └── [...].tsx /* [페이지 이름]에서 컴포넌트를 사용하는 경우 */
-            │   └── lib/
-            │       └── [...].tsx /* SVG가 필요한 경우, index.ts와 같은 바렐 파일을 사용하십시오. */
-            │   └── hooks/ /* [페이지 이름]에서 사용자 정의 훅을 사용하는 경우 */
-            ├── _entities/
-            │   └── model/
-            │       └── [...].ts /* API 호출을 위한 유형 또는 인터페이스, 예: 응답 DTO, 요청 DTO 또는 모델 등 */
-            └── api/
-                ├── axios.ts /* axios 함수 그룹 */
-                └── queries.ts /* @tanstack/react-query의 useQuery 객체 */
-            └── page.tsx /* _features/ui/[페이지 이름]PageView.tsx에만 내보내기 */
-            └── page.tsx
-        └── shared/
-            ├── components/ /* 기능 페이지의 공유 컴포넌트 */
-            └── hooks/ /* 기능 페이지의 공유 훅 */
+└── app/
+    └── [페이지 이름]/
+        ├── _features/
+        │   └── ui/
+        │       └── [...].tsx /* [페이지 이름]에서 컴포넌트를 사용하는 경우 */
+        │   └── lib/
+        │       └── [...].tsx /* SVG가 필요한 경우, index.ts와 같은 바렐 파일을 사용하십시오. */
+        │   └── hooks/ /* [페이지 이름]에서 사용자 정의 훅을 사용하는 경우 */
+        ├── _entities/
+        │   └── model/
+        │       └── [...].ts /* API 호출을 위한 유형 또는 인터페이스, 예: 응답 DTO, 요청 DTO 또는 모델 등 */
+        └── api/
+            ├── axios.ts /* axios 함수 그룹 */
+            └── queries.ts /* @tanstack/react-query의 useQuery 객체 */
+        └── page.tsx /* _features/ui/[페이지 이름]PageView.tsx에만 내보내기 */
+        └── page.tsx
+    └── shared/
+        ├── components/ /* 기능 페이지의 공유 컴포넌트 */
+        └── hooks/ /* 기능 페이지의 공유 훅 */
 ```
 
 # 구현
